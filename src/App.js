@@ -4,11 +4,13 @@ import { Provider } from 'react-redux';
 
 import './config/ReactotronConfig';
 
+import { ToastContainer } from 'react-toastify';
+
 import GloblaStyle from './styles/global';
 import Header from './components/Header';
 import Routes from './routes';
 
-import store from './store'
+import store from './store';
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
         <Routes />
         <GloblaStyle />
       </BrowserRouter>
+      <ToastContainer autoClose={3000} />
     </Provider>
   );
 }
